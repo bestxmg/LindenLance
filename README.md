@@ -20,7 +20,7 @@ to `openGauss/openGauss-server` master, March 2023, 118 files.
 
 → [Full write-up](./opengauss-expression-flattening.md)
 
-**PostgreSQL — [Hashing a parameterised ScalarArrayOpExpr](https://www.mail-archive.com/pgsql-hackers@lists.postgresql.org/msg238384.html)**
+**PostgreSQL — [Hashing a parameterised ScalarArrayOpExpr](https://www.mail-archive.com/pgsql-hackers@lists.postgresql.org/msg238384.html)** · *work in progress*
 
 Extended PG14's `col = ANY (array)` hash-table optimisation — previously
 limited to constant arrays — to cover the parameterised forms real client
@@ -32,7 +32,7 @@ PG14 discussion worried about measured at worst +12µs. Posted to
 
 → [Full write-up](./postgresql-hashed-saop.md)
 
-**GCC — Reduce needless value copies in the analyzer and a few hot middle-end paths**
+**GCC — Reduce needless value copies in the analyzer and a few hot middle-end paths** · *work in progress*
 
 5-patch series to `gcc-patches@gcc.gnu.org`, found by auditing the tree
 with clang-tidy's `performance-*` checks for missed moves and needless
