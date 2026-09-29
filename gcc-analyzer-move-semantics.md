@@ -1,8 +1,11 @@
 # GCC: Reducing Needless Value Copies in the Analyzer and Middle-End
 
-**Status:** Posted to `gcc-patches@gcc.gnu.org`, 24 September 2026. Reviewed
-positively by GCC maintainers David Malcolm and Martin Jambor.
-*(Update once merge is confirmed: commit link here.)*
+**Status:** Posted to `gcc-patches@gcc.gnu.org`, 23 September 2026. Reviewed
+positively by GCC analyzer maintainer David Malcolm and GCC maintainer
+Martin Jambor — patches 1–3 approved as posted; the `text-art`/`canvas.cc`
+and `ipa-cp` patches revised (v2) on 26 September in direct response to
+their feedback. Awaiting push — I don't have commit access, so a
+maintainer needs to land it.
 
 ## Motivation
 
@@ -53,13 +56,21 @@ overlap between the two sets across all 8 pairs.
   16820+10537 pass, with the same 2 pre-existing failures as unpatched
   trunk — an unrelated `-Wanalyzer-symbol-too-complex` depth boundary and a
   known `ivopts` regression — i.e. the series introduces no regressions.
+- A later full bootstrap (`--enable-checking=yes`) also completed cleanly.
 
-## Review
+## Review, and iterating on it
 
 - **David Malcolm** (GCC analyzer maintainer): "nice to see a measurable
-  performance win in the analyzer for this," with line-by-line feedback
-  across all 5 patches.
-- **Martin Jambor** (GCC, SUSE): approved the `ipa-cp` hunks, offered to
-  push patch 1 on its own.
+  performance win in the analyzer for this." Patches 1–3: "looks good to
+  me." On patch 4's `gcc/text-art/canvas.cc` hunk, he suggested a cleaner
+  fix — add an `array2::set` overload taking an rvalue `element_t&&`
+  instead of relying on a `std::move` that wasn't actually moving anything,
+  since `styled_unichar` is non-trivial to copy.
+- **Martin Jambor** (GCC, SUSE): approved the `ipa-cp` hunks and offered to
+  push patches on my behalf, since I don't have commit access.
+- **Follow-up (26 Sept):** implemented David's suggested `array2::set`
+  overload as a new patch, dropped the hunk he couldn't speak to
+  (`gcov.cc`), and split the approved `ipa-cp` change into its own patch
+  for Martin to land separately. Re-bootstrapped clean.
 
-[Cover letter and full review thread →](<PENDING LINK>)
+[Cover letter and full review thread →](<PENDING: public archive link, not yet indexed>)
