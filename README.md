@@ -75,5 +75,5 @@ PG14 discussion worried about measured at worst +12µs. Posted to
 
 ---
 
-💼 Looking for **C++ or Python software engineering roles** — in New Zealand or remote.
+💼 Looking for **software engineering roles** (better in C++ or Python backend) — in New Zealand or remote.
 📫 linden.lance.developer@gmail.com
