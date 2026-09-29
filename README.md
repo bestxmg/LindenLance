@@ -11,6 +11,15 @@ C++ engineer focused on **database systems and performance-critical software**.
 
 #### Selected Open Source Contributions
 
+**openGauss — [Flattening the expression evaluation framework](https://gitee.com/opengauss/openGauss-server/pulls/3121)** · *merged*
+
+The public counterpart to the Expression Flattening Computation Framework
+on my résumé from Huawei's GaussDB team. Flattens the expression tree once
+at init instead of re-walking it recursively on every evaluation. Merged
+to `openGauss/openGauss-server` master, March 2023, 118 files.
+
+→ [Full write-up](./opengauss-expression-flattening.md)
+
 **PostgreSQL — [Hashing a parameterised ScalarArrayOpExpr](https://www.mail-archive.com/pgsql-hackers@lists.postgresql.org/msg238384.html)**
 
 Extended PG14's `col = ANY (array)` hash-table optimisation — previously
@@ -37,5 +46,13 @@ maintainer **Martin Jambor**, revised in response to their feedback.
 Posted 23 September 2026; awaiting push (no commit access).
 
 → [Full write-up](./gcc-analyzer-move-semantics.md)
+
+**mealie — [Test suite reliability and speed](https://github.com/mealie-recipes/mealie)** · *3 PRs merged*
+
+Eliminated all 156 pytest warnings by root-causing each one (not
+suppressing them), locked that in by making warnings fail CI, then cut
+the test suite from ~4 min to ~1.5 min with isolated parallel workers.
+
+→ [Full write-up](./mealie-testing.md)
 
 📫 linden.lance.developer@gmail.com
