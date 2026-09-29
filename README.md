@@ -1,13 +1,14 @@
 ### Hi, I'm Linden 👋
 
-C++ engineer focused on **database systems and performance-critical software**.
+Software engineer specialising in **C++ and database systems**, with 3+
+years of professional experience.
 
 - 🔧 3+ years building database kernel components — query processing, HTAP,
   columnar storage, and performance optimisation (Huawei, GaussDB)
 - 🎓 Completing a Master of Information Technology at the University of
   Waikato, New Zealand
 - 🧠 Interested in query engines, storage engines, and systems programming in C++
-- 📍 Based in the Waikato, New Zealand — open to C++ / backend roles
+- 📍 Based in the Waikato, New Zealand — open to software engineering roles, C++ or Python
 
 #### Selected Open Source Contributions
 
