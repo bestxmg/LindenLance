@@ -23,7 +23,7 @@ years of professional experience.
 |---|---|
 | **Merged**, 118 files | openGauss kernel — public proof of the Expression Flattening project on my résumé → [details](./opengauss-expression-flattening.md) |
 | **156 → 0** warnings, **~2.7×** faster CI | mealie, 3 PRs merged → [details](./mealie-testing.md) |
-| **6.06%** faster `-fanalyzer` | GCC, reviewed by GCC's analyzer maintainer → [details](./gcc-analyzer-move-semantics.md) |
+| **6.06%** faster `-fanalyzer`, 1 patch merged | GCC, reviewed by GCC's analyzer maintainer → [details](./gcc-analyzer-move-semantics.md) |
 | **~49×** faster at N=1000 | PostgreSQL, parameterised `IN` / `= ANY` queries → [details](./postgresql-hashed-saop.md) |
 
 #### Selected Open Source Contributions
@@ -45,7 +45,7 @@ the test suite from ~4 min to ~1.5 min with isolated parallel workers.
 
 → [Full write-up](./mealie-testing.md)
 
-**GCC — Reduce needless value copies in the analyzer and a few hot middle-end paths** · *work in progress*
+**GCC — Reduce needless value copies in the analyzer and a few hot middle-end paths** · *partially merged*
 
 5-patch series to `gcc-patches@gcc.gnu.org`, found by auditing the tree
 with clang-tidy's `performance-*` checks for missed moves and needless
@@ -55,8 +55,9 @@ operator and threads the move through `point_and_state` and
 exploded-graph node — a measured **6.06% speedup** on `-fanalyzer`
 (63.98s → 60.10s median, 8 interleaved runs, no overlap). Reviewed
 positively by GCC analyzer maintainer **David Malcolm** and GCC
-maintainer **Martin Jambor**, revised in response to their feedback.
-Posted 23 September 2026; awaiting push (no commit access).
+maintainer **Martin Jambor**. The `ipa-cp` patch is
+[merged](https://github.com/gcc-mirror/gcc/commit/fe236f5bef799694f693f4eb004634738cb1c059);
+the rest of the series is still awaiting push (no commit access).
 
 → [Full write-up](./gcc-analyzer-move-semantics.md)
 

@@ -4,8 +4,11 @@
 positively by GCC analyzer maintainer David Malcolm and GCC maintainer
 Martin Jambor — patches 1–3 approved as posted; the `text-art`/`canvas.cc`
 and `ipa-cp` patches revised (v2) on 26 September in direct response to
-their feedback. Awaiting push — I don't have commit access, so a
-maintainer needs to land it.
+their feedback. **The `ipa-cp` patch is merged** — Martin Jambor committed
+it as
+[`fe236f5bef7`](https://github.com/gcc-mirror/gcc/commit/fe236f5bef799694f693f4eb004634738cb1c059)
+on my behalf, since I don't have commit access. The rest of the series is
+still awaiting push.
 
 ## Motivation
 
@@ -72,5 +75,9 @@ overlap between the two sets across all 8 pairs.
   overload as a new patch, dropped the hunk he couldn't speak to
   (`gcov.cc`), and split the approved `ipa-cp` change into its own patch
   for Martin to land separately. Re-bootstrapped clean.
+- **Merged (29 Sept):** Martin committed the `ipa-cp` patch —
+  [`fe236f5bef7`](https://github.com/gcc-mirror/gcc/commit/fe236f5bef799694f693f4eb004634738cb1c059),
+  authorship preserved (`Author: linden <bestxmg@gmail.com>`), 2 files
+  changed (`gcc/ipa-cp.cc`, `gcc/ipa-cp.h`).
 
 [Cover letter and full review thread →](<PENDING: public archive link, not yet indexed>)
