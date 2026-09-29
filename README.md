@@ -3,12 +3,28 @@
 Software engineer specialising in **C++ and database systems**, with 3+
 years of professional experience.
 
+![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![GCC](https://img.shields.io/badge/GCC-A42E2B?style=flat-square&logo=gnu&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+
 - 🔧 3+ years building database kernel components — query processing, HTAP,
   columnar storage, and performance optimisation (Huawei, GaussDB)
 - 🎓 Completing a Master of Information Technology at the University of
   Waikato, New Zealand
 - 🧠 Interested in query engines, storage engines, and systems programming in C++
 - 📍 Based in the Waikato, New Zealand — open to software engineering roles, C++ or Python
+
+#### Impact, at a glance
+
+| | |
+|---|---|
+| **Merged**, 118 files | openGauss kernel — public proof of the Expression Flattening project on my résumé → [details](./opengauss-expression-flattening.md) |
+| **156 → 0** warnings, **~2.7×** faster CI | mealie, 3 PRs merged → [details](./mealie-testing.md) |
+| **6.06%** faster `-fanalyzer` | GCC, reviewed by GCC's analyzer maintainer → [details](./gcc-analyzer-move-semantics.md) |
+| **~49×** faster at N=1000 | PostgreSQL, parameterised `IN` / `= ANY` queries → [details](./postgresql-hashed-saop.md) |
 
 #### Selected Open Source Contributions
 
@@ -56,4 +72,7 @@ PG14 discussion worried about measured at worst +12µs. Posted to
 
 → [Full write-up](./postgresql-hashed-saop.md)
 
+---
+
+💼 Looking for **C++ or Python software engineering roles** in New Zealand.
 📫 linden.lance.developer@gmail.com
